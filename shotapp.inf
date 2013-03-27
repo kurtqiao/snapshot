@@ -1,0 +1,39 @@
+## @file
+# Snap Shot Driver
+#
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = shotapp
+  FILE_GUID                      = C677B329-62EF-46b6-B787-7AC84AC83BEF
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+
+  ENTRY_POINT                    = InitializeSnapShot
+
+
+[Sources]
+  shotapp.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  ShellPkg/ShellPkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  MemoryAllocationLib
+  BaseMemoryLib
+  UefiLib
+  BaseLib
+  DebugLib
+
+[Guids]
+
+[Protocols]
+  gEfiSimpleTextInputExProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+
+
